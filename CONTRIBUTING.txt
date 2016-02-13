@@ -1,0 +1,14 @@
+The library addresses common operations concering date and time which might not be implemented by the original .NET API or
+by a specific hardware or software platform. It will contain extension methods, custom types and utilities to solve common
+tasks. Any contribution to make the programming life with dates and time easier will be welcomed.
+
+
+The "master" branch is considered as a stable version representing the most recent release. All developments will be done
+on the "development" branch or a dedicated feature branch.
+
+
+Please follow these guidelines for contributing:
+
+1. Please write a short message to avoid conflicts by implementing the same features or fixing the same issues.
+2. Fork the repository and commit your changes on a dedicated feature branch.
+3. Create a pull request to the "development" branch of the original repository.
