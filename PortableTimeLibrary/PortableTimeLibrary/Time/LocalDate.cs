@@ -17,6 +17,9 @@ namespace PortableTimeLibrary.Time
         private Month m_month;
         private int m_day;
 
+        /// <summary>
+        /// The format string according to the ISO 8601 date format (example output: 2016-02-20).
+        /// </summary>
         public static string IsoDateFormat
         {
             get
@@ -25,8 +28,20 @@ namespace PortableTimeLibrary.Time
             }
         }
 
+        /// <summary>
+        /// Creates a new LocalDate with the given year, month and day.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
         public LocalDate(int year, int month, int day) : this(year, (Month)month, day) { }
 
+        /// <summary>
+        /// Creates a new LocalDate with the given year, month and day.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
         public LocalDate(int year, Month month, int day)
         {
             int monthNumber = month.Number();
@@ -83,6 +98,10 @@ namespace PortableTimeLibrary.Time
             return ToDateTime().AddYears(years).ToLocalDate();
         }
 
+        /// <summary>
+        /// Returns a DateTime with this LocalDate at midnight.
+        /// </summary>
+        /// <returns></returns>
         public DateTime ToDateTime()
         {
             return new DateTime(m_year, m_month.Number(), m_day, 0, 0, 0, 0);

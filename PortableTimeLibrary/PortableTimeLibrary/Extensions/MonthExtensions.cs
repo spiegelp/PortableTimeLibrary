@@ -72,7 +72,7 @@ namespace PortableTimeLibrary.Extensions
         }
 
         /// <summary>
-        /// /// The full name of the month in the given current culture.
+        /// The full name of the month in the given current culture.
         /// </summary>
         /// <param name="month"></param>
         /// <param name="culture"></param>

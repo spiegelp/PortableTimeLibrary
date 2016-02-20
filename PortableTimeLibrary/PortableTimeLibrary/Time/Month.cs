@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PortableTimeLibrary.Time
 {
+    /// <summary>
+    /// Enum with constants for the months with the associated number of the month as numeric value (January = 1, February = 2, ...).
+    /// </summary>
     public enum Month : byte
     {
         January = 1,
