@@ -57,7 +57,7 @@ namespace PortableTimeLibrary.Extensions
                     }
 
                 default:
-                    throw new ArgumentException("invalid month with value " + ((int)month));
+                    throw new ArgumentOutOfRangeException("month", "invalid month with value " + ((int)month));
             }
         }
 
