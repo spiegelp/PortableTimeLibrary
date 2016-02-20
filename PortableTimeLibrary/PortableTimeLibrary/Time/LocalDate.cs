@@ -48,7 +48,7 @@ namespace PortableTimeLibrary.Time
 
             if (monthNumber < 1 || monthNumber > 12)
             {
-                throw new ArgumentOutOfRangeException("month", "invalid month");
+                throw new ArgumentOutOfRangeException("month", "invalid month with number " + ((int)month));
             }
 
             if (day < 1)
@@ -120,6 +120,26 @@ namespace PortableTimeLibrary.Time
         public string ToString(string format, IFormatProvider formatProvider)
         {
             return ToDateTime().ToString(format, formatProvider);
+        }
+
+        public static bool operator <(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() < localDate2.ToDateTime();
+        }
+
+        public static bool operator >(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() > localDate2.ToDateTime();
+        }
+
+        public static bool operator <=(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() <= localDate2.ToDateTime();
+        }
+
+        public static bool operator >=(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() >= localDate2.ToDateTime();
         }
     }
 }
