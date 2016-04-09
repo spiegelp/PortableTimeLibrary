@@ -152,6 +152,16 @@ namespace PortableTimeLibrary.Time
             return ToDateTime().ToString(format, formatProvider);
         }
 
+        public static bool operator ==(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() == localDate2.ToDateTime();
+        }
+
+        public static bool operator !=(LocalDate localDate1, LocalDate localDate2)
+        {
+            return localDate1.ToDateTime() != localDate2.ToDateTime();
+        }
+
         public static bool operator <(LocalDate localDate1, LocalDate localDate2)
         {
             return localDate1.ToDateTime() < localDate2.ToDateTime();
