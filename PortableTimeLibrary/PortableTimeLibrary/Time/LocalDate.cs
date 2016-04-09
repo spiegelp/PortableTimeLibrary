@@ -110,6 +110,25 @@ namespace PortableTimeLibrary.Time
         }
 
         /// <summary>
+        /// The first day of the week of this LocalDate. The first day is taken by the current culture.
+        /// </summary>
+        /// <returns></returns>
+        public LocalDate FirstDayOfWeek()
+        {
+            return ToDateTime().FirstDayOfWeek().ToLocalDate();
+        }
+
+        /// <summary>
+        /// The first day of the week of this LocalDate considering firstDay as the first day of the week.
+        /// </summary>
+        /// <param name="firstDay">the day considered as the first day of the week</param>
+        /// <returns></returns>
+        public LocalDate FirstDayOfWeek(DayOfWeek firstDay)
+        {
+            return ToDateTime().FirstDayOfWeek(firstDay).ToLocalDate();
+        }
+
+        /// <summary>
         /// Returns a DateTime with this LocalDate at midnight.
         /// </summary>
         /// <returns></returns>
