@@ -10,6 +10,10 @@ namespace PortableTimeLibraryDemo
     {
         public static void Main(string[] args)
         {
+            MonthDemo.Demo();
+
+            Console.WriteLine("\n\nPress enter to exit...");
+            Console.Read();
         }
     }
 }
