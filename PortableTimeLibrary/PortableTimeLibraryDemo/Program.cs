@@ -14,6 +14,8 @@ namespace PortableTimeLibraryDemo
 
             DateTimeDemo.Demo();
 
+            LocalDateDemo.Demo();
+
             Console.WriteLine("\n\nPress enter to exit...");
             Console.Read();
         }
