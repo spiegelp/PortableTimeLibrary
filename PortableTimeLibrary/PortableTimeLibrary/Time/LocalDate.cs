@@ -29,6 +29,17 @@ namespace PortableTimeLibrary.Time
         }
 
         /// <summary>
+        /// The current local date.
+        /// </summary>
+        public static LocalDate Today
+        {
+            get
+            {
+                return DateTime.Now.ToLocalDate();
+            }
+        }
+
+        /// <summary>
         /// Creates a new LocalDate with the given year, month and day.
         /// </summary>
         /// <param name="year"></param>
